@@ -1,41 +1,30 @@
-# SageMaker Deployment Project
-
-The notebook and Python files provided here, once completed, result in a simple web app which interacts with a deployed recurrent neural network performing sentiment analysis on movie reviews. This project assumes some familiarity with SageMaker, the mini-project, Sentiment Analysis using XGBoost, should provide enough background.
-
-Please see the [README](https://github.com/udacity/sagemaker-deployment/tree/master/README.md) in the root directory for instructions on setting up a SageMaker notebook and downloading the project files (as well as the other notebooks).
-# Deploying a Sentiment Analysis Model
-
-## Project Overview
-
-In this project, I have used Amazon SageMaker to complete an entire lifecycle of a machine learning project. The goal is to build a very simple web page in which a user can submit a movie review and the prediction model behind the scenes will predict whether it is Positive or Negative review. The prediction model is implemented using Pytorch framework and trainned on IMDB dataset.
+# Deep Learning Udacity Nanodegree - SageMaker Deployment Project
 
 
-## Project Instruction
+This is the final solution of the project 'Sagemaker Deployment' which consists in deploying a Sentiment Analysis model using RNN in the Amazon AWS SageMaker tool. The notebook and Python files provided here result in a simple web app which interacts with a deployed recurrent neural network performing sentiment analysis on movie reviews.
 
-This entire project is done on Amazon sagemaker and uses some heavy GPU instances for training the models. If you want execute this on local machine, you might want to train the model on subset of the training data from IMDB dataset. Also there are steps where we upload the data to amazon S3 instances in order to train using aws instances which you can totally ignore on local machines
+In the final architecture AWS API Gateway and AWS Lambda functions is used as well. The application architecture diagram is:
 
-### Instructions to execute in sagemaker
+![Web app Diagram](./Web&#32;App&#32;Diagram.svg) 
 
-1. Clone the repository.
-	```
-		git clone https://github.com/eswar3/sentiment-analysis-sagemaker-deployment.git
-	```
-2. Open the `SageMaker Project.ipynb` file.
-	```
-		jupyter notebook SageMaker Proejct.ipynb
-	```
-3. Read and follow the instructions! You can find and download the dataset for this project in the notebook.
+You can find the original code without solutions in the original [Udacity SageMaker Deployment repository](https://github.com/udacity/sagemaker-deployment).
+
+ This project assumes some familiarity with SageMaker, the IMDB Sentiment Analysis using XGBoost mini-project (which can be found in the original repository) should provide enough background.
 
 
-### General Outline
+## Setup instructions
+Please see the [original README](https://github.com/udacity/sagemaker-deployment/tree/master/README.md) in the root directory for instructions on setting up a SageMaker notebook and downloading the project files (as well as the other notebooks). For the solutions only clone this repository:
 
-- Step 1: Downloading the data
-- Step 2: Preparing and Processing the data
-- Step 3: Upload the data to S3
-- Step 4: Build and Train the PyTorch Model
-- Step 5: Testing the Model
-- Step 6: Deploying the model for testing
-- Step 7: Use the model for testing
-- Step 6  Deploy the model for the web app
-- Step 7  Use the model for the web app
+```
+cd SageMaker
+git clone https://github.com/hjlopes/sagemaker-sentiment-analysis
+exit
+```
 
+## Web app final result
+
+The final project will be executed in a simple html page which can be deployed anywhere. 
+
+You will see the following:
+
+ 
